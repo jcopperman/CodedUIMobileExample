@@ -16,10 +16,10 @@
         <Button Content="ShowPopup" x:Name="button" HorizontalAlignment="Left" Margin="340,546,0,0" VerticalAlignment="Top" Click="button_Click"/>
         <CheckBox x:Name="checkBox" Content="CheckBox" HorizontalAlignment="Left" Margin="340,493,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="340,429,0,0" VerticalAlignment="Top" Width="120"/>
-        <DatePicker HorizontalAlignment="Left" Margin="340,376,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="340,376,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="radioButton" Content="RadioButton" HorizontalAlignment="Left" Margin="483,493,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="radioButton1" Content="RadioButton" HorizontalAlignment="Left" Margin="608,493,0,0" VerticalAlignment="Top"/>
-        <TimePicker HorizontalAlignment="Left" Margin="340,317,0,0" VerticalAlignment="Top"/>
+        <TimePicker x:Name="timePicker" HorizontalAlignment="Left" Margin="340,317,0,0" VerticalAlignment="Top"/>
         <ListView x:Name="listView" HorizontalAlignment="Left" Height="100" Margin="340,187,0,0" VerticalAlignment="Top" Width="100">
             <ListViewItem Content="Value1"/>
             <ListViewItem Content="Value2"/>

@@ -29,10 +29,12 @@ namespace MyApp
 
         private async void button_Click(object sender, RoutedEventArgs e)
         {
-            var dialog = new Windows.UI.Popups.MessageDialog(
-                "Aliquam laoreet magna sit amet mauris iaculis ornare. " +
-                "Morbi iaculis augue vel elementum volutpat.",
-                "Lorem Ipsum");
+            string monthName = new DateTime(datePicker.Date.Month).ToString("MMM");
+
+            var dialog = new Windows.UI.Popups.MessageDialog(textBlock.Text + " is on " 
+                + datePicker.Date.Day + "of " + monthName + " at " + timePicker.Time.Hours
+                + ":" + timePicker.Time.Minutes, "Lorem Ipsum"
+                );
 
             dialog.Commands.Add(new Windows.UI.Popups.UICommand("Yes") { Id = 0 });
             dialog.Commands.Add(new Windows.UI.Popups.UICommand("No") { Id = 1 });

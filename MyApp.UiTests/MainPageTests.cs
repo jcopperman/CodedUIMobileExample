@@ -25,14 +25,14 @@ namespace MyApp.UiTests
         public void MyApp_WhenLaunched_TextIsBlockDisplayed()
         {
             XamlWindow myAppWindow = XamlWindow.Launch("2f97ff00-c4d4-40e2-bb45-4fa1a9a867b8_b3r19t9dwpk1r!App");
-         
+
             var textBlockText = this.UIMap.UIMyAppWindow.UITextBlockText.DisplayText;
 
             Assert.AreEqual("TextBlock", textBlockText);
         }
 
         [TestMethod]
-        public void MessageDialog_WhenButtonClicked_ButtonTextIsYes()
+        public void MessageDialog_WhenButtonClicked_DialogIsDisplayed()
         {
             XamlWindow myAppWindow = XamlWindow.Launch("2f97ff00-c4d4-40e2-bb45-4fa1a9a867b8_b3r19t9dwpk1r!App");
 
@@ -46,12 +46,12 @@ namespace MyApp.UiTests
         }
 
         [TestMethod]
-        public void MessageDialog_WhenButtonClicked_ShowPopupTextDisplaysYes()
+        public void MessageDialog_WhenYesButtonClicked_ShowPopupTextDisplaysYes()
         {
             XamlWindow myAppWindow = XamlWindow.Launch("2f97ff00-c4d4-40e2-bb45-4fa1a9a867b8_b3r19t9dwpk1r!App");
 
             var btn = this.UIMap.UIMyAppWindow.UIButtonButton;
-            
+
             Gesture.Tap(btn);
 
             var yesBtn = this.UIMap.UILoremIpsumWindow.UIButtonBarToolBar.UIYesButton;
@@ -62,6 +62,7 @@ namespace MyApp.UiTests
 
             Assert.AreEqual("Result: Yes (0)", btn.DisplayText);
         }
+
 
         #region Additional test attributes
 

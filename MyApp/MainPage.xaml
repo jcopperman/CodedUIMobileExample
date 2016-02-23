@@ -14,7 +14,7 @@
             </Flyout>
         </FlyoutBase.AttachedFlyout>
         <Button Content="ShowPopup" x:Name="button" HorizontalAlignment="Left" Margin="340,546,0,0" VerticalAlignment="Top" Click="button_Click"/>
-        <CheckBox x:Name="checkBox" Content="CheckBox" HorizontalAlignment="Left" Margin="340,493,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBox" Content="CheckBox" HorizontalAlignment="Left" Margin="340,493,0,0" VerticalAlignment="Top" Checked="checkBox_Checked"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="340,429,0,0" VerticalAlignment="Top" Width="120"/>
         <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="340,376,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="radioButton" Content="RadioButton" HorizontalAlignment="Left" Margin="483,493,0,0" VerticalAlignment="Top"/>

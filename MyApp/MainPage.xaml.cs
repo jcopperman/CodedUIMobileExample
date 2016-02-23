@@ -28,7 +28,7 @@ namespace MyApp
         }
 
         private async void button_Click(object sender, RoutedEventArgs e)
-        {
+        {            
             string monthName = new DateTime(datePicker.Date.Month).ToString("MMM");
 
             var dialog = new Windows.UI.Popups.MessageDialog(textBlock.Text + " is on " 
@@ -53,6 +53,11 @@ namespace MyApp
             var btn = sender as Button;
             btn.Content = $"Result: {result.Label} ({result.Id})";
 
+        }
+
+        private void checkBox_Checked(object sender, RoutedEventArgs e)
+        {
+            textBlock.Text = "Checkbox is now checked";
         }
     }
 }

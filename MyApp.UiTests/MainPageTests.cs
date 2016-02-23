@@ -32,6 +32,20 @@ namespace MyApp.UiTests
         }
 
         [TestMethod]
+        public void Checkbox_WhenChecked_CheckBoxTextIsNowChecked()
+        {
+            XamlWindow myAppWindow = XamlWindow.Launch("2f97ff00-c4d4-40e2-bb45-4fa1a9a867b8_b3r19t9dwpk1r!App");
+
+            var checkbox = this.UIMap.UIMyAppWindow.UICheckBoxCheckBox;
+            Gesture.Tap(checkbox);
+
+            //TODO: Test still picks up initial value
+            var isCheckedText = this.UIMap.UIMyAppWindow.UITextBlockText.DisplayText;
+
+            Assert.AreEqual("Checkbox is now checked", isCheckedText);
+        }
+
+        [TestMethod]
         public void MessageDialog_WhenButtonClicked_DialogIsDisplayed()
         {
             XamlWindow myAppWindow = XamlWindow.Launch("2f97ff00-c4d4-40e2-bb45-4fa1a9a867b8_b3r19t9dwpk1r!App");
